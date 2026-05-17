@@ -58,10 +58,7 @@ export function ContactSection() {
     setFormState({ nombre: "", correo: "", pais: "", nivel: "", mensaje: "" })
   }
 
-  const whatsappMessage = encodeURIComponent(
-    "Hola, me interesa una clase de prueba con PrimeMath. ¿Me pueden dar más información?"
-  )
-  const whatsappUrl = `https://wa.me/5491100000000?text=${whatsappMessage}`
+  const whatsappUrl = "https://wa.me"
 
   return (
     <section id="contacto" className="bg-secondary py-20 lg:py-28">
