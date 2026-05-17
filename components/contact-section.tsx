@@ -61,11 +61,12 @@ export function ContactSection() {
                 <CheckCircle className="h-8 w-8 text-accent" />
               </div>
               <h3 className="text-xl font-bold text-foreground">
-                {"¡Mensaje enviado!"}
+                {"¡Mensaje recibido!"}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Gracias por contactarnos. Nos pondremos en contacto contigo muy
-                pronto.
+              <p className="max-w-md text-muted-foreground leading-relaxed">
+                Nos comunicaremos contigo por correo en menos de 24 horas. Si
+                tienes prisa, haz clic aqui para hablar de inmediato por
+                WhatsApp.
               </p>
               <a
                 href={whatsappUrl}
@@ -74,7 +75,7 @@ export function ContactSection() {
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-sm font-semibold text-card shadow-lg shadow-[#25D366]/25 transition-transform hover:scale-105"
               >
                 <MessageCircle className="h-4 w-4" />
-                Chatear con un Asesor Academico
+                Hablar ahora por WhatsApp
               </a>
             </div>
           ) : (

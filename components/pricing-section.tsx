@@ -15,7 +15,7 @@ const plans = [
       "Reportes de avance mensuales",
     ],
     message: encodeURIComponent(
-      "Hola PrimeMath, me interesa el Plan Refuerzo Escolar para secundaria. ¿Me dan más información?"
+      "Hola PrimeMath, quiero más información sobre el Plan Refuerzo Escolar para secundaria"
     ),
   },
   {
@@ -32,7 +32,7 @@ const plans = [
       "Acceso a material exclusivo",
     ],
     message: encodeURIComponent(
-      "Hola PrimeMath, me interesa el Plan Intensivo Universitario. ¿Me dan más información y precios?"
+      "Hola PrimeMath, me interesa el Plan Intensivo para ingresos universitarios"
     ),
   },
   {
@@ -47,7 +47,7 @@ const plans = [
       "Sesiones de 1 o 2 horas",
     ],
     message: encodeURIComponent(
-      "Hola PrimeMath, me interesa agendar una Clase Individual / Express. ¿Cuál es la disponibilidad?"
+      "Hola PrimeMath, necesito consultar por horas de clases individuales/express"
     ),
   },
 ]

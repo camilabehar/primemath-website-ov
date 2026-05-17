@@ -6,6 +6,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { PricingSection } from "@/components/pricing-section"
 import { PaymentMethodsSection } from "@/components/payment-methods-section"
 import { ContactSection } from "@/components/contact-section"
+import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppWidget } from "@/components/whatsapp-widget"
 
@@ -21,6 +22,7 @@ export default function Home() {
         <PricingSection />
         <PaymentMethodsSection />
         <ContactSection />
+        <FaqSection />
       </main>
       <Footer />
       <WhatsAppWidget />
