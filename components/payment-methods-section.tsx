@@ -1,4 +1,4 @@
-import { CreditCard, Building2, ArrowLeftRight, ShieldCheck } from "lucide-react"
+import { CreditCard, Building2, ShieldCheck } from "lucide-react"
 
 const paymentMethods = [
   {
@@ -9,7 +9,6 @@ const paymentMethods = [
       </svg>
     ),
     name: "PayPal",
-    description: "Paga de forma segura desde cualquier parte del mundo.",
   },
   {
     icon: () => (
@@ -18,61 +17,51 @@ const paymentMethods = [
       </svg>
     ),
     name: "Western Union",
-    description: "Envía tu pago desde cualquier sucursal o en línea.",
   },
   {
     icon: CreditCard,
-    name: "Tarjetas de Crédito",
-    description: "Visa, Mastercard y American Express aceptadas.",
+    name: "Visa / Mastercard",
   },
   {
     icon: Building2,
-    name: "Transferencias Locales",
-    description: "Transferencias bancarias en moneda local de tu país.",
+    name: "Transferencia Local",
   },
 ]
 
 export function PaymentMethodsSection() {
   return (
-    <section className="bg-secondary py-20 lg:py-28">
+    <section className="py-14 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-accent">
-            Pagos
+            Pagos Seguros
           </span>
-          <h2 className="mt-3 text-balance text-3xl font-extrabold text-foreground md:text-4xl">
+          <h2 className="mt-3 text-balance text-2xl font-extrabold text-foreground md:text-3xl">
             Metodos de Pago Internacionales
           </h2>
-          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            Ofrecemos multiples opciones de pago para que puedas elegir la que
-            mejor se adapte a tu pais y preferencia.
-          </p>
         </div>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-8 lg:gap-14">
           {paymentMethods.map((method) => (
             <div
               key={method.name}
-              className="group flex flex-col items-center rounded-xl bg-card p-8 text-center shadow-sm transition-all hover:shadow-md"
+              className="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110"
             >
-              <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary">
                 {typeof method.icon === "function" ? (
                   <method.icon />
                 ) : (
                   <method.icon className="h-8 w-8" />
                 )}
               </div>
-              <h3 className="text-lg font-bold text-foreground">
+              <span className="text-xs font-medium text-muted-foreground">
                 {method.name}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {method.description}
-              </p>
+              </span>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <div className="mt-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <ShieldCheck className="h-5 w-5 text-primary" />
           <span>Todos los pagos son seguros y verificados</span>
         </div>

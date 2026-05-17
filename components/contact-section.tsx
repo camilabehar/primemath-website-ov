@@ -36,7 +36,7 @@ const levels = [
 export function ContactSection() {
   const [state, handleSubmit] = useForm("xlgvrlro")
 
-  const whatsappUrl = "https://wa.me"
+  const whatsappUrl = `https://wa.me/56934654076?text=${encodeURIComponent("Hola, me interesa una clase de prueba con PrimeMath. ¿Me pueden dar más información?")}`
 
   return (
     <section id="contacto" className="bg-secondary py-20 lg:py-28">
@@ -74,7 +74,7 @@ export function ContactSection() {
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-sm font-semibold text-card shadow-lg shadow-[#25D366]/25 transition-transform hover:scale-105"
               >
                 <MessageCircle className="h-4 w-4" />
-                O escríbenos por WhatsApp
+                Chatear con un Asesor Academico
               </a>
             </div>
           ) : (
@@ -241,7 +241,7 @@ export function ContactSection() {
                   className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-sm font-semibold text-card shadow-lg shadow-[#25D366]/25 transition-transform hover:scale-105"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  Chatear por WhatsApp
+                  Chatear con un Asesor (Respuesta Inmediata)
                 </a>
               </div>
             </form>

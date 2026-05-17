@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight, Play, MessageCircle } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -23,30 +23,33 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Domina las Matemáticas{" "}
+            Domina las Matematicas{" "}
             <span className="text-accent">a tu Propio Ritmo</span> con
             PrimeMath
           </h1>
 
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Clases personalizadas con profesores expertos para estudiantes de
-            toda Latinoamérica. Desde apoyo escolar hasta ingreso universitario,
-            te acompañamos en cada paso.
+            toda Latinoamerica. Desde apoyo escolar hasta ingreso universitario,
+            te acompanamos en cada paso.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="#contacto"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-8 py-3.5 text-base font-semibold text-accent-foreground shadow-lg shadow-accent/25 transition-transform hover:scale-105"
+            <a
+              href={`https://wa.me/56934654076?text=${encodeURIComponent("Hola, me interesa una clase de prueba con PrimeMath. ¿Me pueden dar más información?")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-transform duration-200 hover:scale-105"
             >
-              Reserva tu Clase Gratis
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+              <MessageCircle className="h-5 w-5" />
+              Chatear con un Asesor Academico
+            </a>
             <Link
               href="#servicios"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-8 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-secondary"
             >
               Conoce Nuestros Servicios
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -67,7 +70,7 @@ export function HeroSection() {
                 +500 estudiantes
               </p>
               <p className="text-xs text-muted-foreground">
-                ya confían en PrimeMath
+                ya confian en PrimeMath
               </p>
             </div>
           </div>
@@ -78,7 +81,7 @@ export function HeroSection() {
           <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-primary/10">
             <Image
               src="/images/hero-illustration.jpg"
-              alt="Estudiante aprendiendo matemáticas online con PrimeMath"
+              alt="Estudiante aprendiendo matematicas online con PrimeMath"
               width={600}
               height={450}
               className="h-auto w-full object-cover"
@@ -88,7 +91,7 @@ export function HeroSection() {
           {/* Floating badge */}
           <div className="absolute -bottom-4 -left-4 rounded-xl bg-card p-4 shadow-lg border border-border lg:-bottom-6 lg:-left-6">
             <p className="text-2xl font-extrabold text-accent">98%</p>
-            <p className="text-xs text-muted-foreground">de aprobación</p>
+            <p className="text-xs text-muted-foreground">de aprobacion</p>
           </div>
         </div>
       </div>
